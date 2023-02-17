@@ -1,4 +1,4 @@
-# LAB - Class 03
+# LAB - Class 04
 
 ## Project: Server Practice
 
@@ -10,15 +10,15 @@ To practice server deployment
 
 ### Links and Resources
 
-- [GitHub Actions ci/cd]()
-- [back-end server url]()
+- [GitHub Actions ci/cd](https://github.com/j-davitt/api-server/actions)
+- [back-end server url](https://api-server-6qem.onrender.com)
 
 
 ### Setup
 
 #### `.env` requirements (where applicable)
 
-DATABASE_URL=postgres://localhost:5432/api-app
+DATABASE_URL=postgres://localhost:5432/lab4
 
 
 #### How to initialize/run your application (where applicable)
@@ -40,5 +40,4 @@ DATABASE_URL=postgres://localhost:5432/api-app
 
 #### UML
 
-
-![Lab 4]()
+![Lab 4](./assets/lab4.png)
