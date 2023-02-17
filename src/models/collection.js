@@ -44,8 +44,8 @@ class Collection {
 
   async delete(id) {
     try {
-      const record = await this.model.destroy({ where: { id } });
-      return record;
+      await this.model.destroy({ where: { id } });
+
     } catch (error) {
       console.error('error in the collection interface');
       return error;

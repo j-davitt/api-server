@@ -20,6 +20,11 @@ describe('REST API', () => {
       type: 'test',
     });
 
+    const responseTwo = await request.post('/food').send({
+      name: 'test2',
+      type: 'test2',
+    });
+
     expect(response.body.name).toEqual('test');
   });
 
@@ -28,6 +33,7 @@ describe('REST API', () => {
 
     expect(response.body.length).toBeGreaterThan(0);
     expect(response.body[0].name).toEqual('test');
+    expect(response.body[1].name).toEqual('test2');
   });
 
   it('gets food item by id', async () => {
@@ -41,7 +47,9 @@ describe('REST API', () => {
       name: 'newtest',
       type: 'newtest',
     });
+    const responseTwo = await request.get('/food/1');
     expect(response.status).toBe(200);
+    expect(responseTwo.body.name).toEqual('test');
   });
 
   it('deletes food item by id', async () => {

@@ -40,8 +40,8 @@ router.put('/clothes/:id', async (req, res, next) => {
 
 router.delete('/clothes/:id', async (req, res, next) => {
   try {
-    const deletedClothes = await clothesCollection.delete(req.params.id);
-    res.status(200).send(deletedClothes);
+    await clothesCollection.delete(req.params.id);
+    res.status(200).send('Deleted clothes');
   } catch (error) {
     next(error);
   }
