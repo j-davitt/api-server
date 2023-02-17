@@ -32,12 +32,24 @@ class Collection {
     }
   }
 
-  async update() {
-
+  async update(json, id) {
+    try {
+      const record = await this.model.update(json, { where: { id } });
+      return record;
+    } catch (error) {
+      console.error('error in the collection interface');
+      return error;
+    }
   }
 
-  async delete() {
-
+  async delete(id) {
+    try {
+      const record = await this.model.destroy({ where: { id } });
+      return record;
+    } catch (error) {
+      console.error('error in the collection interface');
+      return error;
+    }
   }
 }
 
